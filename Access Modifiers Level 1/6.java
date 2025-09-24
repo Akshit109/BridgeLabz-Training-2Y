@@ -33,7 +33,7 @@ class BankAccount {
 }
 
 class SavingsAccount extends BankAccount {
-    private double interestRate;
+    private final double interestRate;
 
     public SavingsAccount(String accountNumber, String accountHolder, double balance, double interestRate) {
         super(accountNumber, accountHolder, balance);
@@ -48,22 +48,4 @@ class SavingsAccount extends BankAccount {
     }
 }
 
-public class Main {
-    public static void main(String[] args) {
-        BankAccount acc1 = new BankAccount("BA1001", "Akshit", 25000);
-        acc1.displayAccountDetails();
-
-        System.out.println();
-
-        SavingsAccount sAcc = new SavingsAccount("SA2001", "Preeti", 50000, 4.5);
-        sAcc.displaySavingsAccountDetails();
-
-        System.out.println("\nDepositing 5000...");
-        sAcc.deposit(5000);
-        sAcc.displaySavingsAccountDetails();
-
-        System.out.println("\nWithdrawing 7000...");
-        sAcc.withdraw(7000);
-        sAcc.displaySavingsAccountDetails();
-    }
-}
+// Remove the Main class from this file. Move it to a new file named Main.java.
