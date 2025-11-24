@@ -1,3 +1,5 @@
+import student_project.Student;
+
 class Student {
     public int rollNumber;
     protected String name;
